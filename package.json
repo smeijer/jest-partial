@@ -4,6 +4,7 @@
   "description": "",
   "source": "src/index.js",
   "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "license": "MIT",
   "author": "Stephan Meijer <stephan@meijer.ws>",
   "repository": {
@@ -24,9 +25,20 @@
   },
   "files": [
     "docs",
-    "dist"
+    "dist",
+    "types"
   ],
-  "keywords": [],
+  "keywords": [
+    "jest",
+    "matchers",
+    "extend",
+    "extended",
+    "test",
+    "testing",
+    "assertions",
+    "partial",
+    "snapshot"
+  ],
   "devDependencies": {
     "husky": "^4.3.0",
     "jest": "^26.4.2",
