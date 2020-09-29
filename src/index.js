@@ -1,21 +1,25 @@
-function partial(obj) {
+const partial = (obj) => {
   if (Array.isArray(obj)) {
-    return expect.arrayContaining(obj.map((x) => partial(x)));
+    return expect.arrayContaining(obj.map(partial));
   }
 
-  if (typeof obj === 'object') {
-    for (let key of Object.keys(obj)) {
-      obj[key] = partial(obj[key]);
-    }
-
-    return expect.objectContaining(obj);
+  if (typeof obj !== 'object') {
+    return obj;
   }
 
-  return obj;
-}
+  const objToCheck = Object.entries(obj).reduce(
+    (fullObj, [key, value]) => ({
+      ...fullObj,
+      [key]: partial(value),
+    }),
+    {},
+  );
+
+  return expect.objectContaining(objToCheck);
+};
 
 expect.extend({
-  toMatchPartial(received, argument) {
+  toMatchPartial: (received, argument) => {
     const pass = this.equals(received, partial(argument));
 
     const receivedMsg = this.utils.printReceived(received);
