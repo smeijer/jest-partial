@@ -1,7 +1,8 @@
 {
   "name": "jest-partial",
   "version": "1.0.1",
-  "description": "",
+  "description": "A partial matcher for Jest to simplify validation of complex structures.",
+  "keywords": ["nodejs", "jest", "tests"],
   "source": "src/index.js",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
