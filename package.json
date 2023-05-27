@@ -2,7 +2,7 @@
   "name": "jest-partial",
   "version": "1.0.1",
   "description": "A partial matcher for Jest to simplify validation of complex structures.",
-  "keywords": ["nodejs", "jest", "tests"],
+  "keywords": ["nodejs", "jest", "testing"],
   "source": "src/index.js",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
@@ -28,17 +28,6 @@
     "docs",
     "dist",
     "types"
-  ],
-  "keywords": [
-    "jest",
-    "matchers",
-    "extend",
-    "extended",
-    "test",
-    "testing",
-    "assertions",
-    "partial",
-    "snapshot"
   ],
   "devDependencies": {
     "husky": "^4.3.0",
